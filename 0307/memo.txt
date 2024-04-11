@@ -1,0 +1,15 @@
+0307
+
+migirin nobori
+
+normal
+
+30mm          0000265F
+50mm          0000263F
+100mm         0000260F
+
+
+proposed
+30mm        000248F
+50mm        000251F        
+100mm       000258F

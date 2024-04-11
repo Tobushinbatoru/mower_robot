@@ -1,0 +1,15 @@
+0301 oriru
+
+normal
+0mm  00187F
+4mm  00189F
+8mm  00190F
+12mm 00191F
+
+proposed
+0mm  000206F
+4mm  000207F
+8mm  000210F
+12mm 000211F
+11mm 000214F
+

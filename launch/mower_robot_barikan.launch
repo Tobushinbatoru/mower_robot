@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <node name="mower_robot_barikan" pkg="mower_robot" type="mower_robot_barikan" />
+    
+</launch>

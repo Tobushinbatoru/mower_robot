@@ -1,0 +1,58 @@
+#include <Arduino.h>
+#include <Wire.h>
+#include <VL53L0X.h>
+
+uint16_t newdata = 0;
+uint16_t lastdata = 0;
+uint16_t filtereddata = 0;
+
+VL53L0X sensor;
+
+void setup()
+{
+  Serial.begin(9600);
+  Wire.begin();
+
+  sensor.setTimeout(500);
+  if (!sensor.init())
+  {
+    Serial.println("Failed to detect and initialize sensor!");
+    while (1) {}
+  }
+
+  sensor.startContinuous();
+}
+
+void loop() {
+
+  float weight = 0.8;
+
+  newdata = sensor.readRangeContinuousMillimeters();
+  if (sensor.timeoutOccurred()) {Serial.print(" TIMEOUT");}
+
+  if (lastdata == 0) {
+    lastdata = newdata;
+    return; 
+  }
+   
+  filtereddata = (1.0 - weight) * lastdata + (newdata * weight);
+  lastdata = newdata;
+
+  Serial.print(filtereddata);
+  Serial.println();
+}
+
+uint16_t BubbleSort (uint16_t samples[]) {
+  uint16_t tmp = 0;
+
+  for (int j = 0; j < SAMPLE_SIZE - 1; j++) { for (int i = SAMPLE_SIZE - 1; i > j; i--) {
+      if (samples[i - 1] > samples[i]) {
+        tmp = samples[i - 1];
+        samples[i - 1] = samples[i];
+        samples[i] = tmp;
+      }
+    }
+  }
+  debug(samples);
+  return samples[(SAMPLE_SIZE - 1) / 2];
+}

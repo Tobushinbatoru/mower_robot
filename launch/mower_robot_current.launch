@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <node name="serial_current_node"        pkg="rosserial_python"      type="serial_node.py">
+        <param name="port"              type="string"               value="/dev/serial/by-id/usb-Arduino__www.arduino.cc__0043_7513030383535181F051-if00"/>
+        <!--param name="baud"              type="int"                  value="115200"/-->
+    </node>
+
+</launch>

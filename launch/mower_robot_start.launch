@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <include file="$(find mower_robot)/launch/mower_robot_wakeup.launch" />
+    
+    <include file="$(find mower_robot)/launch/mower_robot_current.launch" />
+    
+    <!--include file="$(find mower_robot)/launch/mower_robot_distance.launch" /-->
+    
+    <include file="$(find mower_robot)/launch/mower_robot_joy.launch" />
+    
+    <include file="$(find mower_robot)/launch/mower_robot_barikan.launch" />
+
+</launch>
+
+

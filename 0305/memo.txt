@@ -1,0 +1,24 @@
+0305
+taikaku
+
+normal
+
+0mm         000233F
+25mm        000234F
+40mm        000235F
+50mm        000236F
+65mm        000237F
+
+
+proposed
+
+0mm        
+
+
+
+
+65mm         000240F
+50mm         000241F
+40mm         000242F
+25mm         000243F
+0mm          000245F   

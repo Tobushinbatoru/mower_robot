@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <node name="mower_robot_serial_class"        pkg="mower_robot"      type="mower_robot_serial_class"	output="screen">
+    
+    </node>
+
+</launch>
+
